@@ -35,7 +35,7 @@ bool load_riscv_binary(RISCLESSContext* ctx,const uint8_t* binary_data, size_t b
 
   
   if(binary_size>=sizeof(ctx->ram)){
-    DEBUG_LOG("Failed to load binary due to insufficient VM context memory.");
+    DEBUG_LOG("ERROR","Failed to load binary due to insufficient VM context memory.");
     return false;
   }
   std::memcpy(0, ctx->ram, binary_size);
